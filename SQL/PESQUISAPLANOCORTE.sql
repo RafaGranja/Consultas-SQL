@@ -1,0 +1,110 @@
+SELECT ATV.CODCOLIGADA,
+       ATV.CODFILIAL,
+       ISNULL((SELECT TOP 1 AATVD.DSCATIVIDADE
+               FROM   KATVESTRUTURA AATVE
+                      INNER JOIN KATIVIDADE AATVD
+                              ON AATVE.CODCOLIGADA = AATVD.CODCOLIGADA
+                                 AND AATVE.CODFILIAL = AATVD.CODFILIAL
+                                 AND AATVE.CODATIVIDADE = AATVD.CODATIVIDADE
+               WHERE  AATVE.CODCOLIGADA = ATV.CODCOLIGADA
+                      AND AATVE.CODFILIAL = ATV.CODFILIAL
+                      AND AATVE.CODESTRUTURA = ATV.CODESTRUTURA
+                      AND AATVE.PRIORIDADE < ATVOC.PRIORIDADE
+               ORDER  BY AATVE.PRIORIDADE DESC), '-')
+       ATV_ANTERIOR,
+       P.CODIGOPRD,
+       P.IDPRD,
+       P.DESCRICAO                                                   DSCITEM,
+       ATV.QTPREVISTA
+       QTDEPLANEJADA,
+       ATV.QUANTIDADE                                                APONTADO,
+       ATV.QTPREVISTA - ATV.QUANTIDADE                               SALDO,
+       ATV.CODPOSTO,
+       P.CODUNDCONTROLE,
+       ATV.CODORDEM                                                  OP,
+       ATV.IDATVORDEM,
+       ATVOC.PRIORIDADE,
+       (SELECT CUSTO
+        FROM   KCUSTOPOSTO (NOLOCK) X
+        WHERE  X.CODCOLIGADA = ATV.CODCOLIGADA
+               AND X.CODFILIAL = ATV.CODFILIAL
+               AND X.CODPOSTO = ATV.CODPOSTO
+               AND Cast(DTINICIAL AS DATE) <= Cast(Getdate() AS DATE)
+               AND Cast(DTFINAL AS DATE) >= Cast(Getdate() AS DATE)) CUSTO_POSTO
+       ,
+       ATVD.DSCATIVIDADE,
+       ATVD.CODATIVIDADE,
+       TRFC.CELULA,
+       TRFC.CELULA + '-' + C.DESCRICAO                               CELULAR,
+       ATV.CODESTRUTURA,
+       ATV.CODATIVIDADE,
+       TRF.IDPRJ,
+       PRJ.CODPRJ                                                    OS,
+       TRF.FOLGACALC,
+       ATV.PERCENTUAL
+       AVANCO_REALIZADO,
+       Z.CODSUCATA,
+       Z.QTDESUCATA,
+       Z.QUANTIDADE                                                  QTDEPLANO,
+       Z.QTDEAPONTADA,
+       ISNULL((SELECT Sum(ISNULL(QTDEAPONTADA, 0))
+               FROM   ZMDPLANOAPROVEITAMENTOCORTE
+               WHERE  NUMPLANOCORTE = Z.NUMPLANOCORTE
+                      AND CODCOLIGADA = ATV.CODCOLIGADA
+                      AND CODFILIAL = ATV.CODFILIAL), 0)
+       TEM_APONTAMENTO,
+       ISNULL((SELECT TOP 1 AATVD.DSCATIVIDADE
+               FROM   KATVORDEMCOMPL AATVE
+                      INNER JOIN KATVORDEM ATVOD
+                              ON AATVE.CODCOLIGADA = ATVOD.CODCOLIGADA
+                                 AND AATVE.CODFILIAL = ATVOD.CODFILIAL
+                                 AND AATVE.IDATVORDEM = ATVOD.IDATVORDEM
+                      INNER JOIN KATIVIDADE AATVD
+                              ON AATVE.CODCOLIGADA = AATVD.CODCOLIGADA
+                                 AND AATVE.CODFILIAL = AATVD.CODFILIAL
+                                 AND AATVD.CODATIVIDADE = ATVOD.CODATIVIDADE
+               WHERE  AATVE.CODCOLIGADA = ATV.CODCOLIGADA
+                      AND AATVE.CODFILIAL = ATV.CODFILIAL
+                      AND AATVE.CODESTRUTURA = ATV.CODESTRUTURA
+                      AND AATVE.PRIORIDADE > ATVOC.PRIORIDADE
+               ORDER  BY AATVE.PRIORIDADE), 'ULTIMA')
+       ATV_POSTERIOR,
+       Z.QTDMPFINAL
+FROM   KATVORDEM ATV
+       INNER JOIN KATVORDEMCOMPL ATVOC
+               ON ATV.CODCOLIGADA = ATVOC.CODCOLIGADA
+                  AND ATV.CODFILIAL = ATVOC.CODFILIAL
+                  AND ATV.CODORDEM = ATVOC.CODORDEM
+                  AND ATV.IDATVORDEM = ATVOC.IDATVORDEM
+       INNER JOIN KATIVIDADE ATVD
+               ON ATV.CODCOLIGADA = ATVD.CODCOLIGADA
+                  AND ATV.CODFILIAL = ATVD.CODFILIAL
+                  AND ATV.CODATIVIDADE = ATVD.CODATIVIDADE
+       INNER JOIN TPRD P
+               ON ATV.CODCOLIGADA = P.CODCOLIGADA
+                  AND ATV.CODESTRUTURA = P.CODIGOPRD
+       INNER JOIN MTRF TRF
+               ON TRF.CODCOLIGADA = ATV.CODCOLIGADA
+                  AND TRF.CODTRFAUX = ATV.CODORDEM
+       INNER JOIN MPRJ PRJ
+               ON PRJ.CODCOLIGADA = TRF.CODCOLIGADA
+                  AND PRJ.IDPRJ = TRF.IDPRJ
+                  AND PRJ.POSICAO IN ( 1, 4 )
+       LEFT JOIN MTRFCOMPL TRFC
+               ON TRF.CODCOLIGADA = TRFC.CODCOLIGADA
+                  AND TRF.IDPRJ = TRFC.IDPRJ
+                  AND TRF.IDTRF = TRFC.IDTRF
+       LEFT JOIN GCONSIST C
+               ON C.CODTABELA = 'CELULA'
+                  AND C.APLICACAO = 'M'
+                  AND C.CODINTERNO = TRFC.CELULA
+       INNER JOIN ZMDPLANOAPROVEITAMENTOCORTE Z
+               ON ATV.CODCOLIGADA = Z.CODCOLIGADA
+                  AND ATV.CODFILIAL = Z.CODFILIAL
+                  AND ATV.CODORDEM = Z.CODORDEM
+                  AND ATV.CODATIVIDADE = Z.CODATIVIDADE
+WHERE  ATV.CODCOLIGADA = 1
+       AND ATV.CODFILIAL = 7
+       AND Z.NUMPLANOCORTE = 'CNC004722'
+ORDER  BY ATV.CODORDEM,
+          ATVOC.PRIORIDADE 
