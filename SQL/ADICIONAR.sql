@@ -1,1 +1,0 @@
-AND M.REVISAO = (SELECT Max(REVISAO) FROM MPRJ where codprj = :CCUSTO)
