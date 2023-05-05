@@ -87,3 +87,5 @@ WHERE A.LOGIN LIKE CONCAT('%',@LOGIN,'%') AND TEXT NOT LIKE '(@P0%'
 EXEC MASTER.DBO.SP_WHOISACTIVE
 
 EXEC MASTER.DBO.STPVERIFICA_LOCKS
+
+select * from sys.dm_exec_connections where client_net_address not like '10.0.3.2%'
