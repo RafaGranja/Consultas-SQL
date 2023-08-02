@@ -501,3 +501,68 @@ FROM   (SELECT T.CODCOLIGADA,
 		    	UNION 
 		    	SELECT * FROM CTE_RAS 
 		    	) R 
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+DECLARE @IDMOV INT
+SET @IDMOV=1392899--1395577
+
+
+
+
+     ;WITH CTE_RAS AS( 
+		    		SELECT T.CODCOLIGADA,T.CODFILIAL,TLA.IDMOVDESTINO,TLA.IDMOVORIGEM,T2.CODTMV,T2.STATUS,T2.NUMEROMOV,TD.NOME FROM 
+		    		TMOV T 
+		    		INNER JOIN TMOVRELAC TLA ON 
+		    		TLA.IDMOVORIGEM=T.IDMOV 
+		    		AND TLA.CODCOLORIGEM=T.CODCOLIGADA 
+		    		INNER JOIN TMOV T2 ON 
+		    		T2.CODCOLIGADA=T.CODCOLIGADA 
+		    		AND T2.IDMOV=TLA.IDMOVDESTINO 
+		    		INNER JOIN TTMV TD ON 
+		    		TD.CODTMV=T2.CODTMV 
+		    		AND TD.CODCOLIGADA=T2.CODCOLIGADA 
+		    		AND TD.TIPOIDENTIFIC=T2.TIPO 
+                    AND T.IDMOV=@IDMOV
+		    		UNION ALL 
+		    		SELECT CTE_RAS.CODCOLIGADA,T.CODFILIAL,TLA.IDMOVDESTINO,CTE_RAS.IDMOVDESTINO,T.CODTMV,T.STATUS,T.NUMEROMOV,TD.NOME FROM CTE_RAS 
+		    		INNER JOIN TMOVRELAC TLA ON 
+		    		TLA.IDMOVORIGEM=CTE_RAS.IDMOVDESTINO 
+		    		AND TLA.CODCOLORIGEM=CTE_RAS.CODCOLIGADA 
+		    		INNER JOIN TMOV T ON 
+		    		T.CODCOLIGADA=CTE_RAS.CODCOLIGADA 
+		    		AND T.IDMOV=TLA.IDMOVDESTINO 
+		    		INNER JOIN TTMV TD ON 
+		    		TD.CODTMV=T.CODTMV 
+		    		AND TD.CODCOLIGADA=T.CODCOLIGADA 
+		    		AND TD.TIPOIDENTIFIC=T.TIPO 
+		    	) 
+		    	SELECT CODCOLIGADA,IDMOV,CODFILIAL,PAI,CODTMV, 
+		    	CASE STATUS 
+		    	WHEN 'A' THEN 'Pendente / A Faturar'  
+		    	WHEN 'B' THEN 'Bloqueado'  
+		    	WHEN 'C' THEN 'Cancelado'  
+		    	WHEN 'F' THEN 'Faturado '  
+		    	WHEN 'G' THEN 'Parcialmente Faturado'  
+		    	WHEN 'N' THEN 'Normal'  
+		    	WHEN 'P' THEN 'Parcialmente Quitado'  
+		    	WHEN 'Q' THEN 'Quitado' 
+		    	WHEN 'R' THEN 'Não Processado' 
+		    	WHEN 'U' THEN 'Em Faturamento' 
+		    	WHEN 'O' THEN 'Aguardando Análise' 
+		    	WHEN 'Y' THEN 'Não Iniciado' 
+		    	WHEN 'E' THEN 'Em Andamento' 
+		    	WHEN 'Z' THEN 'Terminado' 
+		    	ELSE 'TESTE2' END AS STATUS,NUMEROMOV,NOME FROM ( 
+		    	SELECT T.CODCOLIGADA,T.CODFILIAL,IDMOV,'0' PAI,T.CODTMV,STATUS,NUMEROMOV,TD.NOME FROM 
+		    	TMOV T 
+		    	LEFT JOIN TTMV TD ON 
+		    	TD.CODTMV=T.CODTMV 
+		    	AND TD.CODCOLIGADA=T.CODCOLIGADA 
+                WHERE T.IDMOV= @IDMOV
+		    	UNION 
+		    	SELECT * FROM CTE_RAS 
+		    ) R 
