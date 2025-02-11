@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AttDatasets",
+    "\\Comando SQL"
   ],
-  "SelectedNode": "\\VINCULAMOVIMENTOS.sql",
+  "SelectedNode": "\\TESTE.sql",
   "PreviewInSolutionExplorer": false
 }

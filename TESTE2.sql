@@ -1,0 +1,144 @@
+SELECT
+    ROW_NUMBER() OVER(
+        ORDER BY
+            R3.CODCOLIGADA
+    ) ID,
+    R3.CODCOLIGADA,
+    R3.CODFILIAL,
+    IDPRODUTO,
+    SUM(R3.PREVISTO) PREVISTO,
+    SUM(R3.APONTADO) APONTADO,
+    R3.GRUPO,
+    R3.MASKPRD,
+    R3.SUBSTITUTO,
+    L.NUMLOTE,
+    L.IDLOTE,
+    SUM(LC.SALDOFISICO2 + LC.SALDOFISICO8) SALDOFISICO2,
+    L.IDSTATUS,
+    LS.DESCRICAO,
+    LC.CODLOC,
+    T2.CODIGOPRD,
+    T2.CUSTOMEDIO,
+    T2.CODUNDCONTROLE
+FROM
+    (
+        SELECT
+            '47185' IDPRODUTO,
+            R2.PREVISTO,
+            R2.APONTADO,
+            R2.CODFILIAL,
+            R2.GRUPO,
+            R2.MASKPRD,
+            R2.CODCOLIGADA,
+            ISNULL(IDPRDORIGEM, IDPRODUTO) SUBSTITUTO
+        FROM
+            (
+                SELECT
+                    KL.NUMEXEC EXECUCAO,
+                    K.CODCCUSTO,
+                    KA.CODCOLIGADA,
+                    KA.CODFILIAL,
+                    KA.CODESTRUTURA,
+                    K.CODORDEM,
+                    KA.IDATVORDEM,
+                    KA.CODATIVIDADE,
+CASE
+                        WHEN PAPC.NUMPLANOCORTE IS NULL THEN 0
+                        ELSE CASE
+                            WHEN PAPC.QTDEAPONTADA IS NULL THEN CASE
+                                WHEN PAPC.QUANTIDADE - KA.QUANTIDADE < 0 THEN 0
+                                ELSE PAPC.QUANTIDADE - KA.QUANTIDADE
+                            END
+                            ELSE PAPC.QUANTIDADE - PAPC.QTDEAPONTADA
+                        END
+                    END AS SALDOPAPC,
+                    CASE
+                        WHEN PAPC.NUMPLANOCORTE IS NULL THEN '0'
+                        ELSE PAPC.NUMPLANOCORTE
+                    END AS PAPC,
+                    KMA.IDPRODUTO,
+                    KMA.QTDUSADA PREVISTO,
+                    KMA.APONTADO,
+                    P.CODTB2FAT GRUPO,
+                    LEFT(P.CODIGOPRD, 6) MASKPRD,
+                    P.CODIGOPRD,
+                    KMA.IDPRDORIGEM
+                FROM
+                    KORDEM (NOLOCK) K
+                    INNER JOIN KATVORDEM (NOLOCK) KA ON KA.CODCOLIGADA = K.CODCOLIGADA
+                    AND KA.CODFILIAL = K.CODFILIAL
+                    AND KA.CODORDEM = K.CODORDEM
+                    INNER JOIN KORDEMCOMPL (NOLOCK) KL ON KL.CODCOLIGADA = KA.CODCOLIGADA
+                    AND KL.CODFILIAL = KA.CODFILIAL
+                    AND KL.CODORDEM = KA.CODORDEM
+                    INNER JOIN V_DELP_COMPONENTES (NOLOCK) KMA ON KMA.CODCOLIGADA = KA.CODCOLIGADA
+                    AND KMA.CODFILIAL = KA.CODFILIAL
+                    AND KMA.CODORDEM = KA.CODORDEM
+                    AND KMA.IDATVORDEM = KA.IDATVORDEM
+                    INNER JOIN TPRD (NOLOCK) P ON KMA.CODCOLIGADA = P.CODCOLIGADA
+                    AND KMA.IDPRODUTO = P.IDPRD
+                    LEFT JOIN ZMDPLANOAPROVEITAMENTOCORTE (NOLOCK) PAPC ON PAPC.CODCOLIGADA = KA.CODCOLIGADA
+                    AND PAPC.CODFILIAL = KA.CODFILIAL
+                    AND PAPC.CODORDEM = KA.CODORDEM
+                    AND PAPC.CODATIVIDADE = KA.CODATIVIDADE
+                WHERE
+                    K.STATUS NOT IN (5, 6)
+                    AND KA.STATUS NOT IN (6)
+                    AND P.IDPRD = 47185
+                    AND K.CODCOLIGADA = 1
+                    AND K.CODFILIAL = 7
+                    AND K.CODORDEM = '104978/24'
+                    AND KA.IDATVORDEM = 1
+                    AND PAPC.NSEQPLANOCORTE IS NULL
+                    AND (
+                        P.CODTB2FAT = 0184
+                        OR LEFT(P.CODIGOPRD, 6) NOT IN ('01.053', '01.019', '01.020')
+                        OR K.CODFILIAL = 8
+                    )
+            ) R2
+    ) R3
+    INNER JOIN TLOTEPRD L ON L.CODCOLIGADA = R3.CODCOLIGADA
+    AND L.IDPRD = R3.IDPRODUTO
+    INNER JOIN TSTATUSLOTEPRD LS ON LS.IDSTATUS = L.IDSTATUS
+    INNER JOIN TLOTEPRDLOC LC ON LC.CODCOLIGADA = L.CODCOLIGADA
+    AND LC.IDLOTE = L.IDLOTE
+    INNER JOIN TPRD T2 ON T2.CODCOLIGADA = R3.CODCOLIGADA
+    AND T2.IDPRD = R3.IDPRODUTO
+    LEFT JOIN KORDEM K2 ON K2.CODCOLIGADA = L.CODCOLIGADA
+    AND K2.CODFILIAL = R3.CODFILIAL
+    AND K2.CODORDEM = L.NUMLOTE
+    LEFT JOIN KORDEMCOMPL K2L ON K2L.CODCOLIGADA = K2.CODCOLIGADA
+    AND K2L.CODFILIAL = K2.CODFILIAL
+    AND K2L.CODORDEM = K2.CODORDEM
+    LEFT JOIN FLUIG.DBO.Z_CRM_EXPROJETOS ZE ON ZE.CODCOLIGADA = K2.CODCOLIGADA
+    AND ZE.CODFILIAL = K2.CODFILIAL
+    AND ZE.OS = K2.CODORDEM collate SQL_Latin1_General_CP1_CI_AI
+    AND ZE.EXECUCAO = K2L.CODFILIAL
+    AND ZE.CODTRFPAI = RIGHT(
+        K2.RESPONSAVEL,
+        LEN(K2.RESPONSAVEL) - CHARINDEX('/', K2.RESPONSAVEL)
+    ) collate SQL_Latin1_General_CP1_CI_AI
+WHERE
+    (
+        LC.CODLOC IN (23, 25, 27)
+        OR LC.CODLOC IS NULL
+    )
+    AND L.IDSTATUS IN (1, 6)
+    AND ZE.CODCOLIGADA IS NULL
+GROUP BY
+    R3.CODCOLIGADA,
+    R3.CODFILIAL,
+    R3.IDPRODUTO,
+    R3.GRUPO,
+    R3.MASKPRD,
+    L.NUMLOTE,
+    L.IDLOTE,
+    L.IDSTATUS,
+    LS.DESCRICAO,
+    R3.SUBSTITUTO,
+    LC.CODLOC,
+    T2.CODIGOPRD,
+    T2.CUSTOMEDIO,
+    T2.CODUNDCONTROLE
+ORDER BY
+    NUMLOTE

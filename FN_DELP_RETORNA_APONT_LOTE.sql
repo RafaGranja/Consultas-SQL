@@ -10,7 +10,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER FUNCTION [dbo].[FN_DELP_RETORNA_APONT_LOTE]
+CREATE FUNCTION [dbo].[FN_DELP_RETORNA_APONT_LOTE]
 (	
 	@CODCOLIGADA INT,
 	@IDLOTE INT=NULL,
