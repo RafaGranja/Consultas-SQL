@@ -1,0 +1,248 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\ALTERACODMODELO.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ALTERACODMODELO.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\COMPONENTESATIVIDADE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:COMPONENTESATIVIDADE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\COMPPENDENTES.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:COMPPENDENTES.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\LIVRE.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LIVRE.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELATORIOEXTRATOESTOQUE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RELATORIOEXTRATOESTOQUE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELSOLICITACOESENGENHARIA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RELSOLICITACOESENGENHARIA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELATORIOAUTOALMOX.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RELATORIOAUTOALMOX.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RASTREABILIDADE2.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RASTREABILIDADE2.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RASTREABILIDADEMOVIMENTOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RASTREABILIDADEMOVIMENTOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\MATAPROCESSOTRAVADOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MATAPROCESSOTRAVADOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\LISTAGEMDEPENDENCIAS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LISTAGEMDEPENDENCIAS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\CONSULTAMARCELA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CONSULTAMARCELA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\CONSULTAMARCELA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CONSULTAMARCELA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\LISTAGEMDEPENDENCIAS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LISTAGEMDEPENDENCIAS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\MATAPROCESSOTRAVADOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MATAPROCESSOTRAVADOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RASTREABILIDADEMOVIMENTOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RASTREABILIDADEMOVIMENTOS.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RASTREABILIDADE2.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RASTREABILIDADE2.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELATORIOAUTOALMOX.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RELATORIOAUTOALMOX.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELSOLICITACOESENGENHARIA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RELSOLICITACOESENGENHARIA.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELATORIOEXTRATOESTOQUE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RELATORIOEXTRATOESTOQUE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\LIVRE.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LIVRE.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\COMPPENDENTES.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:COMPPENDENTES.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\COMPONENTESATIVIDADE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:COMPONENTESATIVIDADE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\ALTERACODMODELO.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ALTERACODMODELO.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 380,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ALTERACODMODELO.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\ALTERACODMODELO.sql",
+              "RelativeDocumentMoniker": "ALTERACODMODELO.sql",
+              "ToolTip": "ALTERACODMODELO.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:44:46.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "COMPONENTESATIVIDADE.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\COMPONENTESATIVIDADE.sql",
+              "RelativeDocumentMoniker": "COMPONENTESATIVIDADE.sql",
+              "ToolTip": "COMPONENTESATIVIDADE.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:44:39.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "COMPPENDENTES.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\COMPPENDENTES.sql",
+              "RelativeDocumentMoniker": "COMPPENDENTES.sql",
+              "ToolTip": "COMPPENDENTES.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:44:32.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LIVRE.SQL ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\LIVRE.SQL",
+              "RelativeDocumentMoniker": "LIVRE.SQL",
+              "ToolTip": "LIVRE.SQL ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:44:06.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RELATORIOEXTRATOESTOQUE.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELATORIOEXTRATOESTOQUE.sql",
+              "RelativeDocumentMoniker": "RELATORIOEXTRATOESTOQUE.sql",
+              "ToolTip": "RELATORIOEXTRATOESTOQUE.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:43:40.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RELSOLICITACOESENGENHARIA.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELSOLICITACOESENGENHARIA.sql",
+              "RelativeDocumentMoniker": "RELSOLICITACOESENGENHARIA.sql",
+              "ToolTip": "RELSOLICITACOESENGENHARIA.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:43:10.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RELATORIOAUTOALMOX.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RELATORIOAUTOALMOX.sql",
+              "RelativeDocumentMoniker": "RELATORIOAUTOALMOX.sql",
+              "ToolTip": "RELATORIOAUTOALMOX.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:43:01.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RASTREABILIDADE2.SQL ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RASTREABILIDADE2.SQL",
+              "RelativeDocumentMoniker": "RASTREABILIDADE2.SQL",
+              "ToolTip": "RASTREABILIDADE2.SQL ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:42:53.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RASTREABILIDADEMOVIMENTOS.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\RASTREABILIDADEMOVIMENTOS.sql",
+              "RelativeDocumentMoniker": "RASTREABILIDADEMOVIMENTOS.sql",
+              "ToolTip": "RASTREABILIDADEMOVIMENTOS.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:42:52.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MATAPROCESSOTRAVADOS.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\MATAPROCESSOTRAVADOS.sql",
+              "RelativeDocumentMoniker": "MATAPROCESSOTRAVADOS.sql",
+              "ToolTip": "MATAPROCESSOTRAVADOS.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:42:16.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LISTAGEMDEPENDENCIAS.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\LISTAGEMDEPENDENCIAS.sql",
+              "RelativeDocumentMoniker": "LISTAGEMDEPENDENCIAS.sql",
+              "ToolTip": "LISTAGEMDEPENDENCIAS.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:41:58.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CONSULTAMARCELA.sql ",
+              "DocumentMoniker": "C:\\Users\\rafael.granja\\OneDrive - DELP ENGENHARIA MECANICA S A\\Delp4.0\\SQL\\CONSULTAMARCELA.sql",
+              "RelativeDocumentMoniker": "CONSULTAMARCELA.sql",
+              "ToolTip": "CONSULTAMARCELA.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-07T16:41:22.126Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
